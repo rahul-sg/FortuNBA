@@ -102,9 +102,8 @@ class player_vs_team_query:
 
 
 def main():
+    
     query_engine = player_vs_team_query()
-
-
 
     while (True):
         print("Use [Control + \'C\'] to quit program")
