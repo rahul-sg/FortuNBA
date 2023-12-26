@@ -10,7 +10,6 @@ pd.options.display.show_dimensions = False
 player_input = input("Enter player name: ")
 home_or_away = input("Home or Away or Both: ")
 team_vs = input("Enter team abbreviation(ABV) to check for matchups: ")
-home_search = ""
 szn_0, szn_1, szn_2 = "2023-24", "2022-23", "2021-22"
 
 player_id = [player for player in nba_players if player["full_name"] == player_input][0]["id"]
