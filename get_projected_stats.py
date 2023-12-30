@@ -12,7 +12,7 @@ class get_projected_stats:
 
         self.player = player
         self.team_against = team_against
-        self.k = 25
+        self.k = 5
         self.this_season = "2023-24"
 
         self.query_list = self.p_v_t_query_engine.query(player, home_or_away, team_against)
@@ -27,6 +27,7 @@ class get_projected_stats:
                 prev_matchups_list += [obj]
         
         prev_matchups_df = pd.concat(prev_matchups_list, axis=0).reset_index().iloc[:, 1:-1]
+        self.k = pow(len(prev_matchups_df) + 1, 2)
 
         return prev_matchups_df
         
